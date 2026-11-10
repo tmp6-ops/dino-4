@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <div class="instructions">PRESS <kbd>SPACE</kbd> OR <kbd>↑</kbd> TO JUMP / DUCK WITH <kbd>↓</kbd></div>
+      <div class="scoreboard">
+        <span class="hi-score" id="highScore">HI 00000</span>
+        <span class="current-score" id="currentScore">00000</span>
+      </div>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="800" height="260"></canvas>
+      
+      <!-- Overlay for Start / Game Over -->
+      <div id="gameOverlay" class="overlay">
+        <div class="overlay-content">
+          <h1 id="overlayTitle">T-REX RUNNER</h1>
+          <p id="overlaySubtitle">Press <strong>SPACE</strong> or <strong>Tap</strong> to Start</p>
+          <button id="actionBtn" class="btn">PLAY</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="soundToggleBtn" class="icon-btn" title="Toggle Sound">
+        <span id="soundIcon">🔊 Sound ON</span>
+      </button>
+      <div class="mobile-controls">
+        <button id="duckTouchBtn" class="touch-btn">⬇ DUCK</button>
+        <button id="jumpTouchBtn" class="touch-btn primary">⬆ JUMP</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
